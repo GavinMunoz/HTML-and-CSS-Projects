@@ -3,6 +3,7 @@
 	<head>
 		<title>Virtual Reality | Present by PAWS</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/one_page_website.css">
 	</head>
 	
@@ -34,32 +35,58 @@
 		<section>
 			<div id="gallery">
 				<h1>Gallery</h1>
-				<div class="text">
 				
-					<!-- VIDEO CONTAINER 1 -->
-					<div>
-						<div>
-							<iframe src="./content/360_Room.mp4" alt="Video 1 could not load." width="720" height="480"></iframe>
+					<!-- Images used to open the lightbox -->
+					<div class="row">
+						<div class="column">
+							<img src="./content/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="300px" height="300px" alt="Image 1 could not load.">
 							<div>
 								<h3>We can create products.  Watch this video of a product that can put you in a Real Life 360 video.</p>
 							</div>
 						</div>
-					</div>
-					<!--END VIDEO CONTAINER 1-->
-					<!-- PHOTO CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="./content/image_1.jpg" alt="Image 1 could not display.">
+						<div class="column">
+							<img src="./content/img2.PNG" onclick="openModal();currentSlide(1)" class="hover-shadow" width="300px" height="300px" alt="Image 2 could not display.">
 							<div>
-								<h3>SrA Fowler working in a Virtual Space</h3>
+								<h3>Our PAWS Logo</h3>
 								<p>We have the capability to teach your students the fundamentals of using VR Headsets and Software.</p>
 							</div>
 						</div>
-					</div>
-					<!--END PHOTO CONTAINER 1-->
+					  </div>
+					  
+					<!-- The Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+	  						<div class="mySlides">
+								<div class="numbertext">1 / 2</div>
+								<img src="./content/img1.jpg" style="width:100%">
+		  					</div>
+	  
+		  					<div class="mySlides">
+								<div class="numbertext">2 / 2</div>
+								<img src="./content/img2.PNG" style="width:100%">
+		  					</div>
+	  
+		  					<!-- Next/previous controls -->
+		  					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	  
+		  					<!-- Caption text -->
+		  					<div class="caption-container">
+								<p id="caption"></p>
+		  					</div>
+	  
+		  					<!-- Thumbnail image controls -->
+		  					<div class="column">
+								<img class="demo" src="./content/img1.jpg" onclick="currentSlide(1)" width="100px" height="100px" alt="Paw">
+		  					</div>
+	  
+		  					<div class="column">
+								<img class="demo" src="./content/img2.PNG" onclick="currentSlide(2)" width="100px" height="100px" alt="PAWS Logo">
+		  					</div>
+						</div>
+					</div> 
 
-					
-				</div>
 			</div>
 		</section>
 		<!--END GALLERY-->
@@ -93,7 +120,8 @@
 		<footer class="text">
 			www.pawsindustries.vr &nbsp; |&nbsp; &copy; 2020
 		</footer>
-		<!--END FOOTER-->		
+		<!--END FOOTER-->	
+		<script src="js/one_page_website.js"></script>	
 	</body>
 
 </html>
